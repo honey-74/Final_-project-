@@ -14,9 +14,6 @@ data = {
 
 df = pd.DataFrame(data)
 
-# --------------------------
-# Feature Encoding
-# --------------------------
 df['Label'] = df['Type_Label'].astype('category').cat.codes
 label_mapping = dict(enumerate(df['Type_Label'].astype('category').cat.categories))
 
